@@ -19,6 +19,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Stark"
+            android:label="@string/title_activity_stark"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Lannister"
+            android:label="@string/title_activity_lannister"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

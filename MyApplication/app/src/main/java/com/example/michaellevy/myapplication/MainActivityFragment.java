@@ -6,8 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
+import android.content.Intent;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -22,17 +21,24 @@ public class MainActivityFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view =  inflater.inflate(R.layout.fragment_main, container, false);
 
-        Button myButton = (Button) view.findViewById(R.id.button1);
-        myButton.setOnClickListener(new View.OnClickListener() {
+        Button button1 = (Button) view.findViewById(R.id.button1);
+        button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                View parent = (View)v.getParent();
-                EditText myEditText = (EditText) parent.findViewById(R.id.plain_text_input);
-                String EditTextText = myEditText.getText().toString();
-                Toast toast = Toast.makeText(v.getContext(), EditTextText , Toast.LENGTH_SHORT);
-                toast.show();
+                Intent intent = new Intent(v.getContext(), Stark.class);
+                startActivity(intent);
             }
         });
+
+        Button button2 = (Button) view.findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), Lannister.class);
+                startActivity(intent);
+            }
+        });
+
         return view;
     }
 
