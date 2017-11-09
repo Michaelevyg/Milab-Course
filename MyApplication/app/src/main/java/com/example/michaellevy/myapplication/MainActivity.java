@@ -20,17 +20,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        Button myButton = (Button) findViewById(R.id.button1);
-        myButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                EditText myEditText = (EditText) findViewById(R.id.plain_text_input);
-                String EditTextText = myEditText.getText().toString();
-                Toast toast = Toast.makeText(v.getContext(), EditTextText , Toast.LENGTH_SHORT);
-                toast.show();
-            }
-        });
     }
 
     @Override
