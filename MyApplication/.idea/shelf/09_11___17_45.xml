@@ -1,0 +1,19 @@
+<changelist name="09_11___17_45" date="1510242307202" recycled="false">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/09_11___17_45/shelved.patch" />
+  <option name="DESCRIPTION" value="09.11 - 17:45" />
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable/stark_eddard.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/09_11___17_45/stark_eddard.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable/stark_catelyn.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/09_11___17_45/stark_catelyn.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable/stark_robb.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/09_11___17_45/stark_robb.png" />
+  </binary>
+</changelist>

@@ -1,0 +1,44 @@
+<changelist name="09_11___20_00" date="1510250584150" recycled="false">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/09_11___20_00/shelved.patch" />
+  <option name="DESCRIPTION" value="09.11 - 20:00" />
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable/stark_arya.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/09_11___20_00/stark_arya.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable/stark_eddard.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/09_11___20_00/stark_eddard.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable/stark_catelyn.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/09_11___20_00/stark_catelyn.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable/stark_jon.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/09_11___20_00/stark_jon.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable/stark_robb.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/09_11___20_00/stark_robb.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable/stark_sansa.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/09_11___20_00/stark_sansa.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable/stark_bran.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/09_11___20_00/stark_bran.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable/stark_rickon.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/09_11___20_00/stark_rickon.png" />
+  </binary>
+</changelist>

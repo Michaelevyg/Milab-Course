@@ -1,0 +1,444 @@
+Index: app/src/main/java/com/example/michaellevy/myapplication/Data.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/michaellevy/myapplication/Data.java	(revision )
++++ app/src/main/java/com/example/michaellevy/myapplication/Data.java	(revision )
+@@ -0,0 +1,20 @@
++package com.example.michaellevy.myapplication;
++
++/**
++ * Created by Michael Levy on 09/11/2017.
++ */
++
++public class Data {
++
++    public static String[] names = new String[] {
++            "Eddard",
++            "Catelyn",
++            "Robb"
++    };
++
++    public static int[] picturePath = new int[] {
++            R.drawable.stark_catelyn,
++            R.drawable.stark_eddard,
++            R.drawable.stark_robb
++    };
++}
+Index: app/src/main/java/com/example/michaellevy/myapplication/LannisterFragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/michaellevy/myapplication/LannisterFragment.java	(revision )
++++ app/src/main/java/com/example/michaellevy/myapplication/LannisterFragment.java	(revision )
+@@ -0,0 +1,22 @@
++package com.example.michaellevy.myapplication;
++
++import android.support.v4.app.Fragment;
++import android.os.Bundle;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++
++/**
++ * A placeholder fragment containing a simple view.
++ */
++public class LannisterFragment extends Fragment {
++
++    public LannisterFragment() {
++    }
++
++    @Override
++    public View onCreateView(LayoutInflater inflater, ViewGroup container,
++                             Bundle savedInstanceState) {
++        return inflater.inflate(R.layout.fragment_lannister, container, false);
++    }
++}
+Index: app/src/main/res/layout/content_lannister.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/content_lannister.xml	(revision )
++++ app/src/main/res/layout/content_lannister.xml	(revision )
+@@ -0,0 +1,9 @@
++<fragment xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:id="@+id/fragment"
++    android:name="com.example.michaellevy.myapplication.LannisterFragment"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    app:layout_behavior="@string/appbar_scrolling_view_behavior"
++    tools:layout="@layout/fragment_lannister" />
+Index: app/src/main/res/layout/fragment_stark.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/fragment_stark.xml	(revision )
++++ app/src/main/res/layout/fragment_stark.xml	(revision )
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="utf-8"?>
++<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context="com.example.michaellevy.myapplication.StarkFragment"
++    tools:showIn="@layout/activity_stark">
++
++
++</android.support.constraint.ConstraintLayout>
+Index: app/src/main/res/layout/fragment_lannister.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/fragment_lannister.xml	(revision )
++++ app/src/main/res/layout/fragment_lannister.xml	(revision )
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="utf-8"?>
++<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context="com.example.michaellevy.myapplication.LannisterFragment"
++    tools:showIn="@layout/activity_lannister">
++
++
++</android.support.constraint.ConstraintLayout>
+Index: app/src/main/res/menu/menu_stark.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/menu/menu_stark.xml	(revision )
++++ app/src/main/res/menu/menu_stark.xml	(revision )
+@@ -0,0 +1,10 @@
++<menu xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    tools:context="com.example.michaellevy.myapplication.Stark">
++    <item
++        android:id="@+id/action_settings"
++        android:orderInCategory="100"
++        android:title="@string/action_settings"
++        app:showAsAction="never" />
++</menu>
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/strings.xml	(date 1510231097000)
++++ app/src/main/res/values/strings.xml	(revision )
+@@ -1,4 +1,6 @@
+ <resources>
+     <string name="app_name">My Application</string>
+     <string name="action_settings">Settings</string>
++    <string name="title_activity_stark">Stark</string>
++    <string name="title_activity_lannister">Lannister</string>
+ </resources>
+Index: app/src/main/res/layout/activity_stark.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_stark.xml	(revision )
++++ app/src/main/res/layout/activity_stark.xml	(revision )
+@@ -0,0 +1,25 @@
++<?xml version="1.0" encoding="utf-8"?>
++<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context="com.example.michaellevy.myapplication.Stark">
++
++    <android.support.design.widget.AppBarLayout
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:theme="@style/AppTheme.AppBarOverlay">
++
++        <android.support.v7.widget.Toolbar
++            android:id="@+id/toolbar"
++            android:layout_width="match_parent"
++            android:layout_height="?attr/actionBarSize"
++            android:background="?attr/colorPrimary"
++            app:popupTheme="@style/AppTheme.PopupOverlay" />
++
++    </android.support.design.widget.AppBarLayout>
++
++    <include layout="@layout/content_stark" />
++
++</android.support.design.widget.CoordinatorLayout>
+Index: app/src/main/java/com/example/michaellevy/myapplication/Lannister.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/michaellevy/myapplication/Lannister.java	(revision )
++++ app/src/main/java/com/example/michaellevy/myapplication/Lannister.java	(revision )
+@@ -0,0 +1,20 @@
++package com.example.michaellevy.myapplication;
++
++import android.os.Bundle;
++import android.support.design.widget.FloatingActionButton;
++import android.support.design.widget.Snackbar;
++import android.support.v7.app.AppCompatActivity;
++import android.support.v7.widget.Toolbar;
++import android.view.View;
++
++public class Lannister extends AppCompatActivity {
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_lannister);
++        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
++        setSupportActionBar(toolbar);
++    }
++
++}
+Index: app/src/main/res/layout/activity_lannister.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_lannister.xml	(revision )
++++ app/src/main/res/layout/activity_lannister.xml	(revision )
+@@ -0,0 +1,25 @@
++<?xml version="1.0" encoding="utf-8"?>
++<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context="com.example.michaellevy.myapplication.Lannister">
++
++    <android.support.design.widget.AppBarLayout
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:theme="@style/AppTheme.AppBarOverlay">
++
++        <android.support.v7.widget.Toolbar
++            android:id="@+id/toolbar"
++            android:layout_width="match_parent"
++            android:layout_height="?attr/actionBarSize"
++            android:background="?attr/colorPrimary"
++            app:popupTheme="@style/AppTheme.PopupOverlay" />
++
++    </android.support.design.widget.AppBarLayout>
++
++    <include layout="@layout/content_lannister" />
++
++</android.support.design.widget.CoordinatorLayout>
+Index: app/src/main/java/com/example/michaellevy/myapplication/Stark.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/michaellevy/myapplication/Stark.java	(revision )
++++ app/src/main/java/com/example/michaellevy/myapplication/Stark.java	(revision )
+@@ -0,0 +1,20 @@
++package com.example.michaellevy.myapplication;
++
++import android.os.Bundle;
++import android.support.design.widget.FloatingActionButton;
++import android.support.design.widget.Snackbar;
++import android.support.v7.app.AppCompatActivity;
++import android.support.v7.widget.Toolbar;
++import android.view.View;
++
++public class Stark extends AppCompatActivity {
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_stark);
++        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
++        setSupportActionBar(toolbar);
++    }
++
++}
+Index: app/src/main/res/layout/content_stark.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/content_stark.xml	(revision )
++++ app/src/main/res/layout/content_stark.xml	(revision )
+@@ -0,0 +1,9 @@
++<fragment xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:id="@+id/fragment"
++    android:name="com.example.michaellevy.myapplication.StarkFragment"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    app:layout_behavior="@string/appbar_scrolling_view_behavior"
++    tools:layout="@layout/fragment_stark" />
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/AndroidManifest.xml	(date 1510231097000)
++++ app/src/main/AndroidManifest.xml	(revision )
+@@ -19,6 +19,14 @@
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+         </activity>
++        <activity
++            android:name=".Stark"
++            android:label="@string/title_activity_stark"
++            android:theme="@style/AppTheme.NoActionBar" />
++        <activity
++            android:name=".Lannister"
++            android:label="@string/title_activity_lannister"
++            android:theme="@style/AppTheme.NoActionBar"></activity>
+     </application>
+ 
+ </manifest>
+\ No newline at end of file
+Index: app/src/main/res/menu/menu_lannister.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/menu/menu_lannister.xml	(revision )
++++ app/src/main/res/menu/menu_lannister.xml	(revision )
+@@ -0,0 +1,10 @@
++<menu xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    tools:context="com.example.michaellevy.myapplication.Lannister">
++    <item
++        android:id="@+id/action_settings"
++        android:orderInCategory="100"
++        android:title="@string/action_settings"
++        app:showAsAction="never" />
++</menu>
+Index: app/src/main/res/layout/fragment_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/fragment_main.xml	(date 1510231097000)
++++ app/src/main/res/layout/fragment_main.xml	(revision )
+@@ -11,23 +11,24 @@
+         android:id="@+id/button1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:text="Click Me"
++        android:text="House Stark"
+         app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintHorizontal_bias="0.059"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintRight_toRightOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+-        app:layout_constraintVertical_bias="0.992" />
++        app:layout_constraintVertical_bias="0.96" />
+ 
+-    <EditText
+-        android:id="@+id/plain_text_input"
+-        android:layout_width="368dp"
++    <Button
++        android:id="@+id/button2"
++        android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:inputType="text"
+-        android:text="Please enter your text"
++        android:text="House Lannister"
+         app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintHorizontal_bias="0.932"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintRight_toRightOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+-        app:layout_constraintVertical_bias="0.148" />
++        app:layout_constraintVertical_bias="0.96" />
+ 
+ </android.support.constraint.ConstraintLayout>
+Index: app/src/main/java/com/example/michaellevy/myapplication/MainActivityFragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/michaellevy/myapplication/MainActivityFragment.java	(date 1510231097000)
++++ app/src/main/java/com/example/michaellevy/myapplication/MainActivityFragment.java	(revision )
+@@ -6,8 +6,7 @@
+ import android.view.View;
+ import android.view.ViewGroup;
+ import android.widget.Button;
+-import android.widget.EditText;
+-import android.widget.Toast;
++import android.content.Intent;
+ 
+ /**
+  * A placeholder fragment containing a simple view.
+@@ -22,17 +21,24 @@
+                              Bundle savedInstanceState) {
+         View view =  inflater.inflate(R.layout.fragment_main, container, false);
+ 
+-        Button myButton = (Button) view.findViewById(R.id.button1);
+-        myButton.setOnClickListener(new View.OnClickListener() {
++        Button button1 = (Button) view.findViewById(R.id.button1);
++        button1.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+-                View parent = (View)v.getParent();
+-                EditText myEditText = (EditText) parent.findViewById(R.id.plain_text_input);
+-                String EditTextText = myEditText.getText().toString();
+-                Toast toast = Toast.makeText(v.getContext(), EditTextText , Toast.LENGTH_SHORT);
+-                toast.show();
++                Intent intent = new Intent(v.getContext(), Stark.class);
++                startActivity(intent);
+             }
+         });
++
++        Button button2 = (Button) view.findViewById(R.id.button2);
++        button2.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) {
++                Intent intent = new Intent(v.getContext(), Lannister.class);
++                startActivity(intent);
++            }
++        });
++
+         return view;
+     }
+ 
+Index: app/src/main/java/com/example/michaellevy/myapplication/StarkFragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/michaellevy/myapplication/StarkFragment.java	(revision )
++++ app/src/main/java/com/example/michaellevy/myapplication/StarkFragment.java	(revision )
+@@ -0,0 +1,22 @@
++package com.example.michaellevy.myapplication;
++
++import android.support.v4.app.Fragment;
++import android.os.Bundle;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++
++/**
++ * A placeholder fragment containing a simple view.
++ */
++public class StarkFragment extends Fragment {
++
++    public StarkFragment() {
++    }
++
++    @Override
++    public View onCreateView(LayoutInflater inflater, ViewGroup container,
++                             Bundle savedInstanceState) {
++        return inflater.inflate(R.layout.fragment_stark, container, false);
++    }
++}
