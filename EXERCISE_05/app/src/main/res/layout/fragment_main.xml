@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.example.michaellevy.exercise_05.MainActivityFragment"
+tools:showIn="@layout/activity_main">
+
+<EditText
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:inputType="textPersonName"
+    android:ems="10"
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true"
+    android:id="@+id/etVal"
+    android:hint="Please enter your search query" />
+
+<Button
+    android:text="Click"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/etVal"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="20dp"
+    android:id="@+id/button" />
+
+<TextView
+    android:text="wating for you search"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/button"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="40dp"
+    android:id="@+id/label" />
+
+</RelativeLayout>
