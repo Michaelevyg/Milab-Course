@@ -1,0 +1,3 @@
+https://miLABex07.herokuapp.com/
+https://milabex07.herokuapp.com/getTime
+https://milabex07.herokuapp.com/getFile?filename=file
