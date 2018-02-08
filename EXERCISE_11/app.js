@@ -39,6 +39,45 @@ app.post('/', function(req, res) {
     });
 });
 
+// Read song by name / artist / genre / album
+app.get('/', function(req, res) {
+    if(req.query.name) {
+        db.collection('songs').findOne({name: req.query.name}, function(err, song) {
+            if (err || !song) {
+                res.send("Can't find song");
+            } else {
+                res.send(song);
+            }
+        });
+    } else if(req.query.artist) {
+        db.collection('songs').find({artist: req.query.artist}).toArray((err, songs) => {
+            if (err || !songs[0]) {
+                res.send("Can't find artist");
+            } else {
+                res.send(songs);
+            }
+        });
+    } else if(req.query.genre) {
+        db.collection('songs').find({genre: req.query.genre}).toArray((err, songs) => {
+            if (err || !songs[0]) {
+                res.send("Can't find genre");
+            } else {
+                res.send(songs);
+            }
+        });
+    } else if(req.query.album) {
+        db.collection('songs').find({album: req.query.album}).toArray((err, songs) => {
+            if (err || !songs[0]) {
+                res.send("Can't find album");
+            } else {
+                res.send(songs);
+            }
+        });
+    } else {
+        res.send("enter a valid url");
+    }
+});
+
 // Update exiting song
 app.put('/', function(req, res) {
     var id = req.body.id;
@@ -55,78 +94,6 @@ app.put('/', function(req, res) {
         }
     });
 });
-
-// Read song by name / artist / genre / album
-app.get('/', function(req, res) {
-    if(req.query.name) {
-        readByName(req.query.name, res);
-    } else if(req.query.artist) {
-        readByArtist(req.query.artist, res);
-    } else if(req.query.genre) {
-        readByGenre(req.query.genre, res);
-    } else if(req.query.album) {
-        readByAlbum(req.query.album, res);
-    } else {
-        res.send("enter a valid url");
-    }
-});
-
-// Read song by name
-function readByName(song, res) {
-    db.collection('songs').findOne({name: song}, function(err, document) {
-        if (err || !document) {
-            res.send("Can't find song");
-        } else {
-            sendSongData(document, res);
-            res.end();
-        }
-    });
-}
-
-// Read song by artist
-function readByArtist(artist, res) {
-    db.collection('songs').find({artist: artist}).toArray((err, songs) => {
-        if (err || !songs[0]) {
-            res.send("Can't find song");
-        } else {
-            songs.forEach(doc => sendSongData(doc, res));
-            res.end();
-        }
-    });
-}
-
-// Read song by genre
-function readByGenre(genre, res) {
-    db.collection('songs').find({genre: genre}).toArray((err, songs) => {
-        if (err || !songs[0]) {
-            res.send("Can't find song");
-        } else {
-            songs.forEach(doc => sendSongData(doc, res));
-            res.end();
-        }
-    });
-}
-
-// Read song by album
-function readByAlbum(album, res) {
-    db.collection('songs').find({album: album}).toArray((err, songs) => {
-        if (err || !songs[0]) {
-            res.send("Can't find song");
-        } else {
-            songs.forEach(doc => sendSongData(doc, res));
-            res.end();
-        }
-    });
-}
-
-// Send song Data
-function sendSongData(song, res) {
-    res.write(`name: ${song.name}\n`);
-    res.write(`artist: ${song.artist}\n`);
-    res.write(`genre: ${song.genre}\n`);
-    res.write(`album: ${song.album}\n`);
-    res.write(`id: ${song._id}\n\n`);
-}
 
 // Delete song
 app.delete('/' , function(req, res) {
